@@ -19,7 +19,7 @@ class HomeFragment : Fragment() {
     ): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
 
-        binding.homeTodayMusicSingleAlbumImgIv.setOnClickListener {
+        binding.homeAlbumImgIv1.setOnClickListener {
             parentFragmentManager.beginTransaction()
                 .replace(R.id.main_frm, AlbumFragment())
                 .commitAllowingStateLoss()
@@ -31,9 +31,10 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // 임시 초기 이미지
-        val song = SongDto("Butter", "BTS", R.drawable.img_album_exp)
-        binding.homeTodayMusicSingleAlbumTitleTv.setText("${song.title}/${song.singer}")
-        binding.homeTodayMusicSingleAlbumImgIv.setImageResource(song.coverImg)
+        val song = SongDto("임시 DTO", "냥냥", R.drawable.img_album_exp5)
+        binding.homeAlbumTitleTv1.setText(song.title)
+        binding.homeAlbumSingerTv1.setText(song.singer)
+        binding.homeAlbumImgIv1.setImageResource(song.coverImg)
         viewModel.setAlbum(song)
     }
 }
