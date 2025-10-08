@@ -7,10 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.tabs.TabLayoutMediator
 import com.mobile.week3.data.SongDto
 import com.mobile.week3.databinding.FragmentHomeBinding
 import com.mobile.week3.adapter.BannerVPAdapter
+import com.mobile.week3.adapter.PannelVPAdapter
 import com.mobile.week3.view_model.SharedViewModel
+import com.mobile.week3.viewpager.home.BannerFragment
+import com.mobile.week3.viewpager.home.PannelFragment
 
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
@@ -32,6 +36,12 @@ class HomeFragment : Fragment() {
         bannerAdapter.addFragment(BannerFragment(R.drawable.img_home_viewpager_exp2))
         binding.homeBannerVp.adapter = bannerAdapter
         binding.homeBannerVp.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+
+        val pannelAdapter = PannelVPAdapter(this)
+        pannelAdapter.addImg(PannelFragment(R.drawable.img_first_album_default))
+        pannelAdapter.addImg(PannelFragment(R.drawable.img_album_exp2))
+        binding.homePannelBackgroundVp.adapter = pannelAdapter
+        TabLayoutMediator(binding.pannelIndicator, binding.homePannelBackgroundVp) { _, _ -> }.attach()
 
         return binding.root
     }

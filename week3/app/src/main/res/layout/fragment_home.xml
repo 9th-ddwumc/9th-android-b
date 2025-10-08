@@ -10,21 +10,38 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/home_pannel_background_iv"
+<!--        <ImageView-->
+<!--            android:id="@+id/home_pannel_background_iv"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="430dp"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:src="@drawable/img_first_album_default"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/home_pannel_background_vp"
             android:layout_width="match_parent"
             android:layout_height="430dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/img_first_album_default"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/pannel_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/home_pannel_background_vp"
+            app:tabIndicatorColor="#3F3FFF" />
 
         <ImageView
             android:id="@+id/home_pannel_btn_nugu_iv"
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:layout_marginTop="20dp"
             android:layout_marginEnd="15dp"
             android:src="@drawable/btn_main_mike"
             app:layout_constraintEnd_toStartOf="@id/home_pannel_btn_ticket_iv"
@@ -127,7 +144,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginBottom="30dp"
             android:src="@drawable/img_album_exp"
-            app:layout_constraintBottom_toBottomOf="@id/home_pannel_background_iv"
+            app:layout_constraintBottom_toBottomOf="@id/home_pannel_background_vp"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
@@ -166,7 +183,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/home_pannel_background_iv" />
+            app:layout_constraintTop_toBottomOf="@id/home_pannel_background_vp" />
 
         <ImageView
             android:id="@+id/home_today_music_title_btn_iv"
@@ -189,7 +206,7 @@
             android:textColor="#3F3FFF"
             android:textSize="16sp"
             app:layout_constraintEnd_toStartOf="@id/home_today_music_domestic_tv"
-            app:layout_constraintTop_toBottomOf="@id/home_pannel_background_iv" />
+            app:layout_constraintTop_toBottomOf="@id/home_pannel_background_vp" />
 
         <TextView
             android:id="@+id/home_today_music_domestic_tv"
@@ -200,7 +217,7 @@
             android:text="국내"
             android:textSize="16sp"
             app:layout_constraintEnd_toStartOf="@id/home_today_music_oversea_tv"
-            app:layout_constraintTop_toBottomOf="@id/home_pannel_background_iv" />
+            app:layout_constraintTop_toBottomOf="@id/home_pannel_background_vp" />
 
         <TextView
             android:id="@+id/home_today_music_oversea_tv"
@@ -211,7 +228,7 @@
             android:text="해외"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/home_pannel_background_iv" />
+            app:layout_constraintTop_toBottomOf="@id/home_pannel_background_vp" />
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/home_banner_vp"

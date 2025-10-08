@@ -1,20 +1,20 @@
-package com.mobile.week3
+package com.mobile.week3.viewpager.album
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.mobile.week3.databinding.FragmentSongBinding
+import com.mobile.week3.databinding.FragmentVideoBinding
 
-class SongFragment : Fragment() {
+class VideoFragment : Fragment() {
 
-    lateinit var binding: FragmentSongBinding
+    lateinit var binding: FragmentVideoBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentSongBinding.inflate(inflater, container, false)
+        binding = FragmentVideoBinding.inflate(inflater, container, false)
         return binding.root
     }
 }

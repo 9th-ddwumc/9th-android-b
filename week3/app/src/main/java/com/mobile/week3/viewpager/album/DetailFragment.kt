@@ -1,4 +1,4 @@
-package com.mobile.week3
+package com.mobile.week3.viewpager.album
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

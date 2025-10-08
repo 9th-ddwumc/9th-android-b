@@ -16,7 +16,9 @@ class AlbumFragment : Fragment() {
     private val viewModel: SharedViewModel by activityViewModels()
     private val information = arrayListOf("수록곡", "상세정보", "영상")
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?,): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
+    ): View? {
         binding = FragmentAlbumBinding.inflate(inflater, container, false)
 
         binding.albumBackIv.setOnClickListener {
