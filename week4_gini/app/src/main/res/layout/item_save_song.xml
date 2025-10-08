@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="15dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="15dp"
+    android:paddingBottom="8dp">
+
+    <ImageView
+        android:id="@+id/saved_song_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_album_exp2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/songInfoLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/saved_song_image"
+        app:layout_constraintEnd_toStartOf="@+id/itemplayIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/txtItemSavedSong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="노래 이름"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:ellipsize="end"
+            android:singleLine="true"/>
+
+        <TextView
+            android:id="@+id/txtItemSavedSinger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="가수 이름"
+            android:textColor="#888888"
+            android:textSize="13sp"
+            android:ellipsize="end"
+            android:singleLine="true"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/itemplayIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:paddingEnd="8dp"
+        android:src="@drawable/btn_miniplay_mvplay"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/itemetcIcon"/>
+
+    <ImageView
+        android:id="@+id/itemetcIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/btn_player_more"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
