@@ -28,6 +28,7 @@ class HomeFragment : Fragment() {
     ): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
 
+        // 아래가 추가된 부분. 브랜치 실수..
         albumDatas.add(0, AlbumDto(1, "제목1", "가수1", R.drawable.img_album_exp))
         albumDatas.add(1, AlbumDto(2, "제목2", "가수2", R.drawable.img_album_exp2))
         albumDatas.add(2, AlbumDto(3, "제목3", "가수3", R.drawable.img_album_exp3))
