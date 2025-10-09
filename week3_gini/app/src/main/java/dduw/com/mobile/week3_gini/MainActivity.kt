@@ -12,6 +12,7 @@ import dduw.com.mobile.week3_gini.locker.LookFragment
 
 class MainActivity : AppCompatActivity() {
 
+    val parentFragmentManager: Any
     lateinit var binding: ActivityMainBinding
 
     val resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->

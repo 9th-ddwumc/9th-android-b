@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayoutMediator
 import dduw.com.mobile.week3_gini.HomeFragment
-import dduw.com.mobile.week3_gini.MainActivity
 import dduw.com.mobile.week3_gini.R
 import dduw.com.mobile.week3_gini.databinding.FragmentAlbumBinding
 
@@ -24,7 +23,8 @@ class AlbumFragment : Fragment() {
         binding = FragmentAlbumBinding.inflate(inflater,container,false)
 
         binding.albumBackIv.setOnClickListener {
-            (context as MainActivity).supportFragmentManager.beginTransaction()
+            parentFragmentManager.beginTransaction()    //액티비티 <-> 프레그먼트 (supportFrangmentManager)
+                                                        //액티비티들의 자식 프레그먼트 <-> 프레그먼트 이동 (parentFramgnetMangerb         )
                 .replace(R.id.main_frm, HomeFragment())
                 .commitAllowingStateLoss()
         }
