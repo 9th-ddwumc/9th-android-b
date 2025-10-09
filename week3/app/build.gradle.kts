@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.mobile.week3"
+    namespace = "com.mobile.week4"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.mobile.week3"
+        applicationId = "com.mobile.week4"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
