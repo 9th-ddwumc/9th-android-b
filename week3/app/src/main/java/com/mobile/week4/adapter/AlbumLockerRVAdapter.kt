@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.mobile.week4.data.AlbumDto
 import com.mobile.week4.databinding.ItemLockerAlbumBinding
 
-class AlbumLockerRVAdapter(): RecyclerView.Adapter<AlbumLockerRVAdapter.ViewHolder>() {
+class AlbumLockerRVAdapter(private val songs: ArrayList<AlbumDto>): RecyclerView.Adapter<AlbumLockerRVAdapter.ViewHolder>() {
     private val albums = ArrayList<AlbumDto>()
 
     interface MyItemClickListener{
@@ -49,7 +49,7 @@ class AlbumLockerRVAdapter(): RecyclerView.Adapter<AlbumLockerRVAdapter.ViewHold
 
     fun removeSong(position: Int){
         albums.removeAt(position)
-        notifyDataSetChanged()
+        notifyItemRemoved(position)
     }
 
     inner class ViewHolder(val binding: ItemLockerAlbumBinding) : RecyclerView.ViewHolder(binding.root){

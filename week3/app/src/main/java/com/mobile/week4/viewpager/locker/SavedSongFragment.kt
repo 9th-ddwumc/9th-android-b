@@ -20,12 +20,13 @@ class SavedSongFragment : Fragment() {
     ): View? {
         binding = FragmentSavedSongBinding.inflate(layoutInflater, container, false)
 
-        val adapter = AlbumLockerRVAdapter()
+        val adapter = AlbumLockerRVAdapter(savedSongs)
         binding.lockerSavedSongRecyclerView.adapter = adapter
 
         adapter.setMyItemClickListener(object : AlbumLockerRVAdapter.MyItemClickListener {
             override fun onRemoveSong(songId: Int) {
-                // 여기 해줘.,
+                val removedSong = savedSongs[songId]
+                adapter.removeSong(songId)
             }
         })
 
