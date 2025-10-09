@@ -15,6 +15,17 @@ class SongFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         binding = FragmentSongBinding.inflate(inflater, container, false)
+
+        binding.songMixoffTg.setOnClickListener {
+            binding.songMixonTg.visibility = View.VISIBLE
+            binding.songMixoffTg.visibility = View.GONE
+        }
+
+        binding.songMixonTg.setOnClickListener {
+            binding.songMixoffTg.visibility = View.VISIBLE
+            binding.songMixonTg.visibility = View.GONE
+        }
+
         return binding.root
     }
 }

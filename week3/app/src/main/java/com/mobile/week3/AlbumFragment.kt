@@ -41,10 +41,10 @@ class AlbumFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.selectedAlbum.observe(viewLifecycleOwner) { song ->
-            binding.albumMusicTitleTv.setText(song.title)
-            binding.albumSingerNameTv.setText(song.singer)
-            binding.albumAlbumIv.setImageResource(song.coverImg)
+        viewModel.selectedAlbum.observe(viewLifecycleOwner) { album ->
+            binding.albumMusicTitleTv.setText(album.title)
+            binding.albumSingerNameTv.setText(album.singer)
+            binding.albumAlbumIv.setImageResource(album.coverImg!!)
         }
     }
 }
