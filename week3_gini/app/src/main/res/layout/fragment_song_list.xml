@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".album.SongListFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/song_mix_text_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:minWidth="153dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/textview_background_radius"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="내 취향 MIX"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:gravity="center_vertical"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/song_mix_toggle_icon"
+            android:layout_width="32dp"
+            android:layout_height="18dp"
+            android:src="@drawable/btn_toggle_off"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="@id/song_mix_text_bg"
+            app:layout_constraintTop_toTopOf="@id/song_mix_text_bg"
+            app:layout_constraintBottom_toBottomOf="@id/song_mix_text_bg"
+            android:layout_marginEnd="20dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
